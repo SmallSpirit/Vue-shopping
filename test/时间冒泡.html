@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+　<form id="form1" runat="server">
+    　　　　<div id="divOne" onclick="alert('我是最外层');">
+    　　　　　　<div id="divTwo" onclick="alert('我是中间层！')">
+    <a href="https://www.baidu.com">我是百度
+    　　　　　　　　<a id="hr_three" href="javascript:;" onclick="clickMe(event)">点击我</a>
+    </a>
+    　　　　　　</div>
+    　　　　</div>
+    　　</form>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+
+   function clickMe(e) {
+       e.stopPropagation();
+       console.log(e);
+   }
+</script>
+</body>
+</html>

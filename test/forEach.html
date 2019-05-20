@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj1 = [
+        {"id":"2","name":"lisi"},
+        {"id":"3","name":"ww"},
+        {"id":"4","name":"zs"}
+    ]
+    var obj2 = [
+        {"id":"2","name":"lisi"},
+        {"id":"3","name":"ww"},
+        {"id":"4","name":"zs"}
+    ]
+//   map
+    function mapList(obj) {
+        var dist = {};
+        obj.map(item => {
+            dist[item.id] = item;
+        })
+        return obj;
+    }
+    function forEachList(obj){
+        var dist = {};
+        obj.forEach(item => {
+            dist[item.id] = item;
+        })
+        return obj;
+    }
+    console.log(mapList(obj1));
+    console.log(forEachList(obj2));
+
+</script>
+</body>
+</html>

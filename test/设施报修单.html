@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广州城市职业学院水电(基础)设施报修单</title>
+    <style>
+
+        .signature{
+            position: relative;
+        }
+        .signature>span{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        table{
+            margin: 0 auto;
+        }
+        h2,p.title{
+            text-align: center;
+        }
+        #print{
+            padding:6px 12px;
+            color: #fff;
+            background: #444;
+            text-align: center;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            float: right;
+        }
+        .print_btn{
+            height: 60px;
+        }
+        @media print {
+            .noprint{
+                display: none; /* 打印状态就隐藏打印按钮 */
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="print_btn noprint">
+    <button id="print" onclick="test()">打印</button>
+</div>
+<div class="gzcz_hydropower">
+<h2>广州城市职业学院水电(基础)设施报修单</h2>
+    <p class="title">编号: <span>0R20190311094038451254</span></p>
+    <table cellpadding="5px" border="1px" cellspacing="0.5px" width="700px">
+        <tr>
+            <td rowspan="2" >报修人</td>
+            <td >滨江物业</td>
+            <td >联系电话:</td>
+            <td>13533060570</td>
+            <td rowspan="2" >报修日期:</td>
+            <td rowspan="2">2019年3月11日</td>
+        </tr>
+        <tr>
+
+            <td></td>
+            <td>联系电话:</td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td >维修位置</td>
+            <td  colspan="2"></td>
+            <td >维修内容</td>
+            <td colspan="2">围墙开裂</td>
+        </tr>
+        <tr>
+            <td colspan="2">报修部门负责人</td>
+            <td colspan="2"></td>
+            <td>后勤处项目负责人</td>
+            <td>夏耀成</td>
+        </tr>
+        <tr>
+            <td>施工单位</td>
+            <td colspan="2">广东省建筑装饰集团公司</td>
+            <td colspan="2">后勤处项目负责人</td>
+            <td>刘阳</td>
+        </tr>
+        <tr>
+            <td colspan="6">现场勘察情况及施工预算：（材料数量、规格型号、工时、费用等，可另附页）</td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <p>1、现场情况：围墙开裂。</p>
+                <p>2、处理方案：</p>
+                <p>（1）拆除围墙开裂的段两面抹灰层；</p>
+                <p>（2）开裂段使用Φ8圆钢做拉结；</p>
+                <p>（3）用水泥砂浆抹灰并填塞缝隙；</p>
+                <p>（4）外墙腻子抹灰3遍，刷外墙乳胶漆2遍；</p>
+                <p>3、施工预算：滨江校区门卫后面围墙开裂维修项目的工程报价为：（小写）4836.4元，（大写）肆仟捌佰叁拾陆元肆角（施工预算：见附件）。</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" height="200px" class="signature" valign="top">报修(使用)部门验收意见: <span>(签字)</span></td>
+            <td colspan="3" height="200px" class="signature" valign="top">后勤处维修监理验收意见: <span>(签字)</span></td>
+        </tr>
+        <tr>
+            <td colspan="6" height="200px" class="signature" valign="top">后勤处结算意见: <span>(签字)</span></td>
+        </tr>
+    </table>
+</div>
+<script>
+    $(function(){
+        $("#print").click(function(){
+            window.print();
+        })
+    })
+</script>
+</body>
+</html>

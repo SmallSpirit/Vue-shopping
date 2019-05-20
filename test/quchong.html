@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <button><a href=""></a></button>
+</head>
+<body>
+<script>
+    function display() {
+        $(document).find("input[name = 'test']").hide()
+    }
+    var a = {
+        "age": "15",
+        "name": "zs"
+    }
+    var b = {
+        "age": "ls"
+    }
+
+    function fuck(a, b) {
+        for (var k in a) {
+            if (!b[k]) {
+                b.k = a[k];
+            }
+        }
+        return b;
+    }
+
+    fuck(a, b);
+    console.log(b);
+
+    function getDatas(array) {
+        const res = [];
+        const json = {};
+        for (let i = 0; i < array.length; i++) {
+            const _self = array[i];
+            if (!json[_self]) {
+                res.push(_self);
+                json[_self] = 1;
+            }
+
+        }
+        return res;
+    }
+
+    function dff() {
+        var a = [1, 55, 44, -9, 0, 2.33, -3.6];
+        var price = /^\d+(\.\d+)?$/;
+        var arr = [];
+        for (var i = 0; i < a.length; i++) {
+            if (price.test(a[i])) {
+                console.log(a[i]);
+            }
+        }
+    }
+
+    var arr1 = [3, 4, 62, 4, 56, 4];
+    var arr2 = arr1.find((item) => {
+        return item === 3;
+    });
+    console.log(arr2);
+
+    var add = {
+        "name":"zs",
+        "age":15
+    }
+    var array_02 = [
+        1,2,3,4,5
+    ]
+    console.log(array_02);
+    function f(json) {
+        return json.name;
+    }
+    var arr3 = array_02.map(item => item)
+    console.log(array_02 == arr3);
+    console.log(arr3);
+    var arr4 = [
+        {"name":"li0","age":20},
+        {"name":"li1","age":21},
+        {"name":"li2","age":22},
+        {"name":"li3","age":20},
+        {"name":"li4","age":23},
+    ]
+    var arr5 = arr4.filter(function (item) {
+        return item.age === 20
+    })
+    console.log(arr4);
+    console.log(arr5);
+</script>
+</body>
+</html>
