@@ -8,7 +8,7 @@
             </div>
             <div class="product-cost">￥{{info.cost}}</div>
             <div class="product-add-cart" @click.prevent="handleCart">
-                加入购物车
+                加入购物车吧
             </div>
         </router-link>
     </div>

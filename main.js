@@ -14,7 +14,7 @@ import product_data from "./product.js";
 //路由配置
 const RouterConfig = {
     //使用html5的History路由模式
-    mode:"history",
+    // mode:"history",
     routes:Routers
 };
 const router = new VueRouter(RouterConfig);
@@ -102,7 +102,7 @@ const store = new Vuex.Store({
                 setTimeout(()=>{
                     context.commit("emptyCart");
                     resolve();
-                },500)
+                }, 500)
             })
         }
     }

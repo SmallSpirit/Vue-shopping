@@ -2,6 +2,7 @@
 var path = require("path");
 //导入插件
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 var config = {
     // 进行入口配置
     entry:{
@@ -10,7 +11,7 @@ var config = {
     //进行输出配置
     output:{
         path:path.join(__dirname,"./dist"),//路径
-        publicPath:"/dist/",
+        publicPath:"",
         filename:"main.js"
     },
     //配置加载器
@@ -60,7 +61,19 @@ var config = {
         new ExtractTextPlugin({
             filename: '[name].css',
             allChunks: true
-        })
+        }),
+        new HtmlWebpackPlugin({
+            favicon: '',
+            filename: "index.html",
+            template: 'index.html',
+            inject: true,
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true
+            },
+            chunksSortMode: 'dependency'
+        }),
     ]
 };
 module.exports = config;
